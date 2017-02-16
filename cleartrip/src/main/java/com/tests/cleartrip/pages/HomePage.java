@@ -49,7 +49,7 @@ public class HomePage extends HomePageFactory{
 	}
 	
 
-	public  void switchToFlightBook()
+	public  void switchToSearch()
 	{
 		acceptNativePermission();
 		commonFunctions = PageFactory.initElements(driver, CommonFunctions.class);

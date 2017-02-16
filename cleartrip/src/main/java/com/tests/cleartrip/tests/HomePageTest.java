@@ -30,7 +30,7 @@ public class HomePageTest extends Setup {
 	homepage.acceptNativePermission();
 	String greetingMessage = homepage.greetingMessage();
 	Assert.assertTrue(greetingMessage.contains("Good"));
-	homepage.switchToFlightBook();
+	homepage.switchToSearch();
   }
 
   @BeforeTest

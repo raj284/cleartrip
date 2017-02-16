@@ -34,7 +34,10 @@ public class SearchPage extends SearchPageFactory{
 	
 	public void navigateToSearch()
 	{
-		homePage.switchToFlightBook();
+		if(driver.findElement(departure_date).isDisplayed())
+			System.out.println("Already in search page");
+		else
+		homePage.switchToSearch();
 		
 	}
 	
@@ -43,6 +46,7 @@ public class SearchPage extends SearchPageFactory{
 		
 		rounTrip.click();
 	}
+	
 	
 	
 	public void enterTravelDetails() throws InterruptedException
