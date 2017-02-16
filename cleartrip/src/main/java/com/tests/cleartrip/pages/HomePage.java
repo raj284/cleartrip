@@ -51,12 +51,12 @@ public class HomePage extends HomePageFactory{
 
 	public  void switchToFlightBook()
 	{
-		
+		acceptNativePermission();
 		commonFunctions = PageFactory.initElements(driver, CommonFunctions.class);
 		commonFunctions.waitForElement(driver, switcher);
 		driver.findElement(switcher).click();
 		System.out.println("Example of pagefactory");
-		rounTrip.click();		
+				
 		
 	}
 	

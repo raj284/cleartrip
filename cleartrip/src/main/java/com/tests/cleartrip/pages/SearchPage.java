@@ -38,12 +38,19 @@ public class SearchPage extends SearchPageFactory{
 		
 	}
 	
+	public void switchToRoundTrip()
+	{
+		
+		rounTrip.click();
+	}
+	
+	
 	public void enterTravelDetails() throws InterruptedException
 	{
 		enterSourceCity();
 		enterDestination();
 		enterTravelDate();
-		searchFlight.click();
+		
 	}
 	
 	
@@ -69,6 +76,15 @@ public class SearchPage extends SearchPageFactory{
 		driver.findElement(Done_button_calender).click();
 		
 	}
+	
+	
+	public void clickOnSearch()
+	{
+		searchFlight.click();
+		
+	}
+	
+	
 	
 	
 	public void selectElementInLocationsList(int n)
