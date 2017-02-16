@@ -34,16 +34,27 @@ public class SearchPage extends SearchPageFactory{
 	
 	public void navigateToSearch()
 	{
-		homePage.switchToFlightBook();
+		if(driver.findElement(departure_date).isDisplayed())
+			System.out.println("Already in search page");
+		else
+		homePage.switchToSearch();
 		
 	}
+	
+	public void switchToRoundTrip()
+	{
+		
+		rounTrip.click();
+	}
+	
+	
 	
 	public void enterTravelDetails() throws InterruptedException
 	{
 		enterSourceCity();
 		enterDestination();
 		enterTravelDate();
-		searchFlight.click();
+		
 	}
 	
 	
@@ -69,6 +80,15 @@ public class SearchPage extends SearchPageFactory{
 		driver.findElement(Done_button_calender).click();
 		
 	}
+	
+	
+	public void clickOnSearch()
+	{
+		searchFlight.click();
+		
+	}
+	
+	
 	
 	
 	public void selectElementInLocationsList(int n)

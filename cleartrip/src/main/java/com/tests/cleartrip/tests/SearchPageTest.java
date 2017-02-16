@@ -19,6 +19,9 @@ import org.testng.annotations.AfterTest;
 public class SearchPageTest extends Setup {
   
 	public AndroidDriver<WebElement> driver;
+	
+	
+	
 @Test
   public void VerifySearchPage() throws InterruptedException {
 	SearchPage searchpage = new SearchPage(driver);
